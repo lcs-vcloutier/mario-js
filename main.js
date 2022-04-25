@@ -7,10 +7,6 @@ kaboom({
     clearColor: [0, 0, 0, 1],
   })
 
-
-// set to true so he jumps when game starts
-let isJumping = true
-
 // main world stuff
 loadRoot('https://i.imgur.com/')
 loadSprite('coin', 'wbKxhcd.png')
@@ -32,3 +28,12 @@ loadSprite('blue-brick', '3e5YRQd.png')
 loadSprite('blue-steel', 'gqVoI2b.png')
 loadSprite('blue-evil-shroom', 'SvV4ueD.png')
 loadSprite('blue-surprise', 'RMqCc1G.png')
+
+// movement stuff
+const MOVE_SPEED = 120
+const JUMP_FORCE = 360
+const BIG_JUMP_FORCE = 550
+let CURRENT_JUMP_FORCE = JUMP_FORCE
+const FALL_DEATH = 400
+const ENEMY_SPEED = 20
+let isJumping = true
